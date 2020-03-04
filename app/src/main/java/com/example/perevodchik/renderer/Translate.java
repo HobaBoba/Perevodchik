@@ -1,4 +1,5 @@
-package com.example.perevodchik;
+package com.example.perevodchik.renderer;
+
 
 public class Translate {
     private int id;
@@ -35,5 +36,6 @@ public class Translate {
         this.translate = translate;
     }
 
-  //  public get()
+    //  public get()
 }
+
