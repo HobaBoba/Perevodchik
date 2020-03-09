@@ -13,9 +13,10 @@ import com.example.perevodchik.renderer.TranslateRenderer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+        implements TranslateRenderer.TranslateListener {
     RecyclerView recycler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +24,20 @@ public class MainActivity extends AppCompatActivity {
 
         initRecycler();
     }
+
     private void initRecycler() {
-        List<Translate> data= MockWordProvider.instance().getData();
+        List<Translate> data = MockWordProvider.instance().getData();
         TranslateRenderer renderer = new TranslateRenderer();//(this.data);
         renderer.setData(data);
+        renderer.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        recycler=(RecyclerView)findViewById(R.id.recycler);
+        recycler = (RecyclerView) findViewById(R.id.recycler);
         recycler.setLayoutManager(layoutManager);
         recycler.setAdapter(renderer);
+    }
+
+    @Override
+    public void onWordClick(String word) {
+
     }
 }

@@ -20,12 +20,18 @@ public class TranslateRenderer extends RecyclerView.Adapter<TranslateRenderer.Tr
     private List<Translate> data;
 
 
+    public void setListener(TranslateListener listener) {
+        this.listener = listener;
+    }
+
+    private TranslateListener listener;
+
+
     //создаем новый обьект ViewHolder когда это необходимо
     @NonNull
     @Override
     public TranslateViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item, null);
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item, parent, false);
         return new TranslateViewHolder(view);
     }
 
@@ -53,6 +59,9 @@ public class TranslateRenderer extends RecyclerView.Adapter<TranslateRenderer.Tr
             super(view);
             word = view.findViewById(R.id.word);
             translate = view.findViewById(R.id.translate);
+            word.setOnClickListener((v) -> {
+                listener.onWordClick(word.getText().toString());
+            }   );
         }
 
         public void bind(Translate translate) {
@@ -60,5 +69,9 @@ public class TranslateRenderer extends RecyclerView.Adapter<TranslateRenderer.Tr
             this.translate.setText((translate.getTranslate()));
         }
 
+    }
+
+    public interface TranslateListener {
+        void onWordClick(String word);
     }
 }
