@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Translate> data= MockWordProvider.instance().getData();
-        TranslateRenderer renderer = new TranslateRenderer();//(this.data);
-        renderer.setData(data);
         initRecycler();
     }
     private void initRecycler() {
-        TranslateRenderer renderer = new TranslateRenderer();//(new ArrayList<>(), this);
+        List<Translate> data= MockWordProvider.instance().getData();
+        TranslateRenderer renderer = new TranslateRenderer();//(this.data);
+        renderer.setData(data);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-        recycler.setAdapter(renderer);
+        recycler=(RecyclerView)findViewById(R.id.recycler);
         recycler.setLayoutManager(layoutManager);
+        recycler.setAdapter(renderer);
     }
 }

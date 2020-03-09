@@ -14,7 +14,9 @@ import java.util.List;
 
 public class TranslateRenderer extends RecyclerView.Adapter<TranslateRenderer.TranslateViewHolder> {
 
-
+    /*public TranslateRenderer(List<Translate> data){
+        this.data=data;
+    }*/
     private List<Translate> data;
 
 
@@ -22,7 +24,8 @@ public class TranslateRenderer extends RecyclerView.Adapter<TranslateRenderer.Tr
     @NonNull
     @Override
     public TranslateViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item, null);
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.translate_item,parent,false);
         return new TranslateViewHolder(view);
     }
 

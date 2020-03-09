@@ -4,6 +4,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:layout_marginTop="10dp">
 
     <TextView
@@ -13,8 +14,10 @@
         android:layout_weight="1"
         android:text="TextView"
         android:textColor="@color/colorAccent"
-        tools:text = "slovo"
-        android:textSize="20sp"/>
+        tools:text = "@string/tools_word"
+        android:textSize="15sp"
+
+        />
 
     <TextView
         android:id="@+id/translate"
@@ -23,6 +26,7 @@
         android:layout_weight="1"
         android:text="TextView"
         android:textColor="@color/colorAccent"
-        tools:text = "перевод"
-        android:textSize="20sp"/>
+        tools:text = "@string/tools_translate"
+        android:textSize="15sp"
+        />
 </LinearLayout>

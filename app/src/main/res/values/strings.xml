@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Perevodchik</string>
+    <string name="tools_word">Word</string>
+    <string name="tools_translate">Перевод</string>
 </resources>
