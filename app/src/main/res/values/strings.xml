@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Perevodchik</string>
+    <string name="app_name">Словарь</string>
     <string name="tools_word">Word to translate</string>
     <string name="tools_translate">Перевод</string>
     <string name="button_add">Добавить</string>
     <string name="button_change">Изменить</string>
-</resources>
+    <string name="action_add_word">Новое слово</string>
+    <string name="action_change_word">Исправить перевод</string>
+ </resources>
