@@ -1,21 +1,20 @@
-package com.example.perevodchik;
+package com.example.perevodchik.presentation;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
+import com.example.perevodchik.R;
+import com.example.perevodchik.presentation.renderer.MockWordProvider;
+import com.example.perevodchik.presentation.renderer.Translate;
+import com.example.perevodchik.presentation.renderer.TranslateRenderer;
 
-import com.example.perevodchik.renderer.MockWordProvider;
-import com.example.perevodchik.renderer.Translate;
-import com.example.perevodchik.renderer.TranslateRenderer;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.perevodchik.R.menu.menu_main;

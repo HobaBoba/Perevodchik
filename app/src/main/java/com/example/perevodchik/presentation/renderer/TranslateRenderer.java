@@ -1,4 +1,4 @@
-package com.example.perevodchik.renderer;
+package com.example.perevodchik.presentation.renderer;
 
 import android.view.LayoutInflater;
 import android.view.View;

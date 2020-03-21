@@ -1,8 +1,10 @@
-package com.example.perevodchik;
+package com.example.perevodchik.presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.perevodchik.R;
 
 public class AddWordActivity extends AppCompatActivity {
 

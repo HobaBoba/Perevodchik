@@ -1,4 +1,4 @@
-package com.example.perevodchik.renderer;
+package com.example.perevodchik.presentation.renderer;
 
 
 public class Translate {
